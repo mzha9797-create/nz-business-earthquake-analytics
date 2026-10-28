@@ -1,6 +1,6 @@
 # New Zealand business and earthquake analytics
 
-A data and visualisation portfolio by **Ming Zhao**. This is the **MBI807B Assessment 1 — NZ Earthquake Business** project identified in the original archive, not the Olist project. Reports, assessment briefs, Turnitin files, student numbers, meeting recordings and demo videos are excluded from this public edition.
+A data and visualisation portfolio by **Ming Zhao**. This is the **MBI807B Assessment 1 — NZ Earthquake Business** project. Reports, assessment briefs, Turnitin files, student numbers, meeting recordings and demo videos are excluded from this public edition.
 
 ![Power BI regional overview](visuals/powerbi_overview.png)
 
