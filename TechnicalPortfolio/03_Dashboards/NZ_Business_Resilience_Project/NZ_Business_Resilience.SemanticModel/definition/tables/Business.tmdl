@@ -1,0 +1,35 @@
+table Business
+
+	column region_code
+		dataType: string
+		sourceColumn: region_code
+		summarizeBy: none
+
+	column reference_year
+		dataType: double
+		sourceColumn: reference_year
+		summarizeBy: none
+
+	column geographic_units
+		dataType: double
+		sourceColumn: geographic_units
+		summarizeBy: none
+
+	column employees
+		dataType: double
+		sourceColumn: employees
+		summarizeBy: none
+
+	column source_sheet
+		dataType: string
+		sourceColumn: source_sheet
+		summarizeBy: none
+
+	partition Business = m
+		mode: import
+		source =
+			let
+				Source = Csv.Document(File.Contents("LOCAL_PATH_REQUIRES_SETUP"),[Delimiter=",",Encoding=65001,QuoteStyle=QuoteStyle.Csv]),
+				Headers = Table.PromoteHeaders(Source,[PromoteAllScalars=true]),
+				Typed = Table.TransformColumnTypes(Headers, {{"region_code", type text}, {"reference_year", type number}, {"geographic_units", type number}, {"employees", type number}, {"source_sheet", type text}}, "en-US")
+			in Typed

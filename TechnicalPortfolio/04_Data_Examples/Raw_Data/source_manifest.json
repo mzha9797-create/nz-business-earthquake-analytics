@@ -1,0 +1,89 @@
+{
+  "retrieved_utc": "2026-10-10T04:48:04.943318+00:00",
+  "sources": [
+    {
+      "file": "statsnz_business_demography_2025.xlsx",
+      "url": "https://www.stats.govt.nz/assets/Uploads/New-Zealand-business-demography-statistics/New-Zealand-business-demography-statistics-At-February-2025/Download-data/new-zealand-business-demography-statistics-at-february-2025.xlsx",
+      "bytes": 172180,
+      "sha256": "0e4ce30f27caebbdf2228a5bf5d90cc43c51c98917423a2f5dbdf9be51069c16"
+    },
+    {
+      "file": "geonet_2020_01.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2020-01-01&enddate=2020-07-01",
+      "bytes": 2099786,
+      "sha256": "3a2ef7764f5e74380092d39c552b8ed5c879acc6ffd0aaf79849282fc2765aad"
+    },
+    {
+      "file": "geonet_2020_07.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2020-07-01&enddate=2021-01-01",
+      "bytes": 1937055,
+      "sha256": "7e68a211d4880a6067fef0a7d0bcdccf2362b6b88813acf4e4c98de351664bfc"
+    },
+    {
+      "file": "geonet_2021_01.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2021-01-01&enddate=2021-07-01",
+      "bytes": 2568592,
+      "sha256": "5273febf6baca9b02dee73c551db6357f0a10f63e7c8a729eb40a330c6a37f4e"
+    },
+    {
+      "file": "geonet_2021_07.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2021-07-01&enddate=2022-01-01",
+      "bytes": 1841756,
+      "sha256": "b886fc7f919e2fd032cced6ab24ca70ef9f254ee6481418a3efe313f61b69d84"
+    },
+    {
+      "file": "geonet_2022_01.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2022-01-01&enddate=2022-07-01",
+      "bytes": 2003477,
+      "sha256": "6962ea13b4e0d1edd614d9d82207e1a597638ef10ca7e94bea08e3439495edf5"
+    },
+    {
+      "file": "geonet_2022_07.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2022-07-01&enddate=2023-01-01",
+      "bytes": 2040364,
+      "sha256": "f956a7b24199ddf4eae1c0a6af7893ad97277ffdd3647a7c39ae3786acc2771e"
+    },
+    {
+      "file": "geonet_2023_01.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2023-01-01&enddate=2023-07-01",
+      "bytes": 2334195,
+      "sha256": "85478c595c25bd66dcfbe6e5f6d52d0721854d6ca03bcd01875176cf43e86ab9"
+    },
+    {
+      "file": "geonet_2023_07.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2023-07-01&enddate=2024-01-01",
+      "bytes": 1940503,
+      "sha256": "d6c2a4940de24633128937e3e81192b0ed8b88096bda63922eef178c0b42dcda"
+    },
+    {
+      "file": "geonet_2024_01.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2024-01-01&enddate=2024-07-01",
+      "bytes": 2416151,
+      "sha256": "45eae03b5ef4bab4d04a63f2c8eafd704ad96f15f0c7a9db54b25b7e5670e996"
+    },
+    {
+      "file": "geonet_2024_07.csv",
+      "url": "https://quakesearch.geonet.org.nz/csv?bbox=165%2C-48%2C180%2C-33&startdate=2024-07-01&enddate=2025-01-01",
+      "bytes": 2701645,
+      "sha256": "1ce3e24851523be67d77dfaca0ea5abd05ebd4955bf43ac104173224e1e53b26"
+    },
+    {
+      "file": "regional_service_metadata.json",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Regional_Council_2025/FeatureServer?f=pjson",
+      "bytes": 11256,
+      "sha256": "d1d1c73ac925807289722f8e52634464f0ae782f6433ab860eb649c7e0beb759"
+    },
+    {
+      "file": "regional_layer_metadata.json",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Regional_Council_2025/FeatureServer/0?f=pjson",
+      "bytes": 20837,
+      "sha256": "7bf24826a32cdd1bb4820f410ac760f970ba57e78b974bc623d0395975548a65"
+    },
+    {
+      "file": "statsnz_regions_2025_full.geojson",
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Regional_Council_2025/FeatureServer/0/query?where=1%3D1&outFields=%2A&returnGeometry=true&outSR=4326&f=geojson",
+      "bytes": 9478395,
+      "sha256": "67841d43de323db687dc0e6625ca62974a41053aba3a75cd0f5822e0be10a24d"
+    }
+  ]
+}

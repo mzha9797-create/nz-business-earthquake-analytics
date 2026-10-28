@@ -1,0 +1,164 @@
+table Earthquakes
+
+	measure 'Events' = COALESCE(COUNTROWS(Earthquakes), 0)
+		formatString: #,0
+
+	measure 'M4 Events' = COALESCE(CALCULATE(COUNTROWS(Earthquakes), Earthquakes[magnitude] >= 4), 0)
+		formatString: #,0
+
+	measure 'Shallow M4 Events' = COALESCE(CALCULATE(COUNTROWS(Earthquakes), Earthquakes[magnitude] >= 4, Earthquakes[depth_km] <= 40), 0)
+		formatString: #,0
+
+	measure 'Business Locations 2025' = CALCULATE(SUM(Business[geographic_units]), Business[reference_year] = 2025)
+		formatString: #,0
+
+	measure 'Regional Employees 2025' = CALCULATE(SUM(Business[employees]), Business[reference_year] = 2025)
+		formatString: #,0
+
+	measure 'M4 Depth 70' = COALESCE(CALCULATE(COUNTROWS(Earthquakes), Earthquakes[magnitude] >= 4, Earthquakes[depth_km] <= 70), 0)
+		formatString: #,0
+
+	measure 'Monthly M4' = COALESCE(SUM(Monthly[m4_events]), 0)
+		formatString: #,0
+
+	measure 'Monthly Shallow M4' = COALESCE(SUM(Monthly[shallow_m4_events]), 0)
+		formatString: #,0
+
+	column public_id
+		dataType: string
+		sourceColumn: public_id
+		summarizeBy: none
+
+	column event_type
+		dataType: string
+		sourceColumn: event_type
+		summarizeBy: none
+
+	column origin_utc
+		dataType: string
+		sourceColumn: origin_utc
+		summarizeBy: none
+
+	column modified_utc
+		dataType: string
+		sourceColumn: modified_utc
+		summarizeBy: none
+
+	column longitude
+		dataType: double
+		sourceColumn: longitude
+		summarizeBy: none
+
+	column latitude
+		dataType: double
+		sourceColumn: latitude
+		summarizeBy: none
+
+	column magnitude
+		dataType: double
+		sourceColumn: magnitude
+		summarizeBy: none
+
+	column depth_km
+		dataType: double
+		sourceColumn: depth_km
+		summarizeBy: none
+
+	column magnitude_type
+		dataType: string
+		sourceColumn: magnitude_type
+		summarizeBy: none
+
+	column depth_type
+		dataType: string
+		sourceColumn: depth_type
+		summarizeBy: none
+
+	column evaluation_method
+		dataType: string
+		sourceColumn: evaluation_method
+		summarizeBy: none
+
+	column evaluation_status
+		dataType: string
+		sourceColumn: evaluation_status
+		summarizeBy: none
+
+	column evaluation_mode
+		dataType: string
+		sourceColumn: evaluation_mode
+		summarizeBy: none
+
+	column earth_model
+		dataType: string
+		sourceColumn: earth_model
+		summarizeBy: none
+
+	column used_phase_count
+		dataType: string
+		sourceColumn: used_phase_count
+		summarizeBy: none
+
+	column used_station_count
+		dataType: string
+		sourceColumn: used_station_count
+		summarizeBy: none
+
+	column magnitude_station_count
+		dataType: string
+		sourceColumn: magnitude_station_count
+		summarizeBy: none
+
+	column minimum_distance
+		dataType: string
+		sourceColumn: minimum_distance
+		summarizeBy: none
+
+	column azimuthal_gap
+		dataType: string
+		sourceColumn: azimuthal_gap
+		summarizeBy: none
+
+	column origin_error
+		dataType: string
+		sourceColumn: origin_error
+		summarizeBy: none
+
+	column magnitude_uncertainty
+		dataType: string
+		sourceColumn: magnitude_uncertainty
+		summarizeBy: none
+
+	column event_year
+		dataType: double
+		sourceColumn: event_year
+		summarizeBy: none
+
+	column event_month
+		dataType: string
+		sourceColumn: event_month
+		summarizeBy: none
+
+	column region_code
+		dataType: string
+		sourceColumn: region_code
+		summarizeBy: none
+
+	column mapping_status
+		dataType: string
+		sourceColumn: mapping_status
+		summarizeBy: none
+
+	column source_file
+		dataType: string
+		sourceColumn: source_file
+		summarizeBy: none
+
+	partition Earthquakes = m
+		mode: import
+		source =
+			let
+				Source = Csv.Document(File.Contents("LOCAL_PATH_REQUIRES_SETUP"),[Delimiter=",",Encoding=65001,QuoteStyle=QuoteStyle.Csv]),
+				Headers = Table.PromoteHeaders(Source,[PromoteAllScalars=true]),
+				Typed = Table.TransformColumnTypes(Headers, {{"public_id", type text}, {"event_type", type text}, {"origin_utc", type text}, {"modified_utc", type text}, {"longitude", type number}, {"latitude", type number}, {"magnitude", type number}, {"depth_km", type number}, {"magnitude_type", type text}, {"depth_type", type text}, {"evaluation_method", type text}, {"evaluation_status", type text}, {"evaluation_mode", type text}, {"earth_model", type text}, {"used_phase_count", type text}, {"used_station_count", type text}, {"magnitude_station_count", type text}, {"minimum_distance", type text}, {"azimuthal_gap", type text}, {"origin_error", type text}, {"magnitude_uncertainty", type text}, {"event_year", type number}, {"event_month", type text}, {"region_code", type text}, {"mapping_status", type text}, {"source_file", type text}}, "en-US")
+			in Typed

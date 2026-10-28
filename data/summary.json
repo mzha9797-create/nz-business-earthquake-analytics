@@ -1,0 +1,18 @@
+{
+  "raw_records": 100739,
+  "accepted_records": 99779,
+  "rejected_records": 960,
+  "matched_records": 82489,
+  "unmapped_records": 17290,
+  "business_records": 170,
+  "region_records": 18,
+  "national_published_2025": {
+    "reference_year": 2025,
+    "geographic_units": 654465,
+    "employees": 2450600
+  },
+  "regional_sum_2025": {
+    "geographic_units": 654465,
+    "employees": 2450560
+  }
+}

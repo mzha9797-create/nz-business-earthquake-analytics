@@ -1,0 +1,35 @@
+table Monthly
+
+	column region_code
+		dataType: string
+		sourceColumn: region_code
+		summarizeBy: none
+
+	column event_month
+		dataType: string
+		sourceColumn: event_month
+		summarizeBy: none
+
+	column event_count
+		dataType: double
+		sourceColumn: event_count
+		summarizeBy: none
+
+	column m4_events
+		dataType: double
+		sourceColumn: m4_events
+		summarizeBy: none
+
+	column shallow_m4_events
+		dataType: double
+		sourceColumn: shallow_m4_events
+		summarizeBy: none
+
+	partition Monthly = m
+		mode: import
+		source =
+			let
+				Source = Csv.Document(File.Contents("LOCAL_PATH_REQUIRES_SETUP"),[Delimiter=",",Encoding=65001,QuoteStyle=QuoteStyle.Csv]),
+				Headers = Table.PromoteHeaders(Source,[PromoteAllScalars=true]),
+				Typed = Table.TransformColumnTypes(Headers, {{"region_code", type text}, {"event_month", type text}, {"event_count", type number}, {"m4_events", type number}, {"shallow_m4_events", type number}}, "en-US")
+			in Typed

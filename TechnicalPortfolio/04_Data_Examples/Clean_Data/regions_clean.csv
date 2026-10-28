@@ -1,0 +1,19 @@
+﻿region_code,region_name,land_area_km2,boundary_year
+00,Offshore or unmapped in study box,,2025
+01,Northland Region,12506.92025521,2025
+02,Auckland,4940.28754165,2025
+03,Waikato Region,23901.32203288,2025
+04,Bay of Plenty Region,12071.58980705,2025
+05,Gisborne Region,8385.06118406,2025
+06,Hawke's Bay Region,14139.28846063,2025
+07,Taranaki Region,7254.40439827,2025
+08,Manawatū-Whanganui Region,22220.59899481,2025
+09,Wellington Region,8049.44101327,2025
+12,West Coast Region,23246.62166585,2025
+13,Canterbury Region,44505.6746565,2025
+14,Otago Region,31185.00252062,2025
+15,Southland Region,31233.78323016,2025
+16,Tasman Region,9615.5615142,2025
+17,Nelson Region,422.20022681,2025
+18,Marlborough Region,10458.39025236,2025
+99,Area Outside Region,799.52476876,2025

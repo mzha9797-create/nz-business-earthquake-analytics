@@ -1,0 +1,12 @@
+relationship 3295dc07-0acb-4648-a887-88ac0ca23137
+	fromColumn: Earthquakes.region_code
+	toColumn: Regions.region_code
+
+relationship 468006bc-4407-4e1e-8c9b-817c4057e2ce
+	fromColumn: Business.region_code
+	toColumn: Regions.region_code
+
+relationship dd4ba184-1bfc-4d3f-8287-3a37e6b77dc2
+	fromColumn: Monthly.region_code
+	toColumn: Regions.region_code
+

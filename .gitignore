@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+**/.pbi/
+*.sqlite
+*.abf
+*.pbix
+TechnicalPortfolio/04_Data_Examples/Raw_Data/*
+!TechnicalPortfolio/04_Data_Examples/Raw_Data/source_manifest.json
+TechnicalPortfolio/04_Data_Examples/Clean_Data/earthquakes_clean.csv
+TechnicalPortfolio/04_Data_Examples/Clean_Data/rejected_records.csv
